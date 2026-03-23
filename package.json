@@ -1,0 +1,15 @@
+{
+  "name": "trackflow",
+  "version": "1.0.0",
+  "description": "Lightweight multi-site traffic analytics",
+  "private": true,
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^2.8.0"
+  }
+}
