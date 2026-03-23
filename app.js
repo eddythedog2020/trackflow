@@ -21,7 +21,12 @@ function showView(view) {
 async function loadSites() {
   try {
     const res = await fetch('/api/sites');
-    sites = await res.json();
+    if (!res.ok) {
+      sites = [];
+    } else {
+      sites = await res.json();
+      if (!Array.isArray(sites)) sites = [];
+    }
 
     // Update selector
     const selector = document.getElementById('site-selector');
